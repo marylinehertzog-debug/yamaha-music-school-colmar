@@ -71,9 +71,9 @@
     }
     
     .glass-nav {
-      background: rgba(17, 20, 21, 0.88);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(17, 20, 21, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
     
     .hero-overlay {
@@ -113,16 +113,16 @@
 </head>
 <body class="bg-surface text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col justify-between">
 
-  <!-- Navigation Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-outline-variant/30 h-20 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+  <!-- Navigation Header with enlarged height for the logo -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-outline-variant/30 h-24 sm:h-28 transition-all duration-300 flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between">
       
-      <!-- Official Yamaha Logo Integration -->
-      <a href="#" class="flex items-center gap-3 group">
+      <!-- Official Yamaha Logo Integration (Enlarged) -->
+      <a href="#" class="flex items-center gap-3 group py-1 shrink-0">
         <img src="logo.png" 
              alt="Yamaha Music School Colmar" 
-             class="h-10 sm:h-12 w-auto object-contain transition-opacity hover:opacity-90"
-             onerror="this.onerror=null; this.src='https://placehold.co/220x60/111415/c9bfff?text=YAMAHA+MUSIC+SCHOOL';" />
+             class="h-14 sm:h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+             onerror="this.onerror=null; this.src='https://placehold.co/320x90/111415/c9bfff?text=YAMAHA+MUSIC+SCHOOL';" />
       </a>
 
       <!-- Desktop Links -->
@@ -131,13 +131,13 @@
         <a href="#tarifs" class="text-on-surface-variant hover:text-primary transition-colors">Tarifs</a>
         <a href="#professeurs" class="text-on-surface-variant hover:text-primary transition-colors">Nos Professeurs</a>
         <a href="#methode" class="text-on-surface-variant hover:text-primary transition-colors">La Méthode</a>
-        <a href="#avis" class="text-on-surface-variant hover:text-primary transition-colors">Avis Élevès</a>
+        <a href="#avis" class="text-on-surface-variant hover:text-primary transition-colors">Avis Élèves</a>
         <a href="#faq" class="text-on-surface-variant hover:text-primary transition-colors">Contact & FAQ</a>
       </nav>
 
       <!-- CTA Button & Mobile Trigger -->
       <div class="flex items-center gap-3">
-        <a href="#reservation" class="bg-primary hover:bg-primary-dim text-on-primary font-bold px-4 sm:px-5 py-2.5 rounded-full text-xs sm:text-sm transition-all shadow-md active:scale-95 flex items-center gap-2">
+        <a href="#reservation" class="bg-primary hover:bg-primary-dim text-on-primary font-bold px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm transition-all shadow-md active:scale-95 flex items-center gap-2">
           <span class="material-symbols-outlined text-base sm:text-lg">event</span>
           <span>Cours d'essai gratuit</span>
         </a>
@@ -150,7 +150,7 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-surface-container border-b border-outline-variant/40 px-6 py-6 space-y-4 shadow-xl">
+    <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-surface-container border-b border-outline-variant/40 px-6 py-6 space-y-4 shadow-xl">
       <a href="#cours" class="block text-on-surface hover:text-primary font-medium py-1" onclick="toggleMenu()">Nos Cours & Disciplines</a>
       <a href="#tarifs" class="block text-on-surface hover:text-primary font-medium py-1" onclick="toggleMenu()">Formats & Tarifs</a>
       <a href="#professeurs" class="block text-on-surface hover:text-primary font-medium py-1" onclick="toggleMenu()">L'Équipe Enseignante</a>
@@ -163,7 +163,7 @@
     </div>
   </header>
 
-  <main class="pt-20">
+  <main class="pt-24 sm:pt-28">
 
     <!-- Hero Section -->
     <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 py-16">
@@ -174,7 +174,7 @@
       <div class="absolute inset-0 hero-overlay z-10"></div>
 
       <!-- Hero Content -->
-      <div class="relative z-20 max-w-5xl mx-auto text-center space-y-8 mt-6">
+      <div class="relative z-20 max-w-5xl mx-auto text-center space-y-8 mt-4">
         
         <!-- September Back-to-school Badge -->
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/15 border border-primary/30 backdrop-blur-md text-primary text-xs sm:text-sm font-semibold tracking-wide">
@@ -254,8 +254,8 @@
       <!-- Main Layout: Sidebar Filter + Cards Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
         
-        <!-- Interactive Sidebar Filter (as seen in image) -->
-        <div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/40 lg:sticky lg:top-28 space-y-6 shadow-lg">
+        <!-- Interactive Sidebar Filter -->
+        <div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/40 lg:sticky lg:top-32 space-y-6 shadow-lg">
           <div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
             <h3 class="font-bold text-on-surface flex items-center gap-2">
               <span class="material-symbols-outlined text-primary">filter_alt</span>
@@ -315,7 +315,7 @@
           </div>
         </div>
 
-        <!-- Course Cards Grid (Dynamic Filtering) -->
+        <!-- Course Cards Grid -->
         <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6" id="course-cards-container">
 
           <!-- Card 1: JMC -->
@@ -366,7 +366,7 @@
                   Apprenez le piano grâce à une méthode progressive alliant solfège ludique, déchiffrage, harmonie et interprétation. Des cours stimulants pour enfants, adolescents et adultes.
                 </p>
                 <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Music Adventure (6-8 ans) & Play for Keeps (>10 ans)</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Music Adventure (6-8 ans) & Play for Keeps (&gt;10 ans)</li>
                   <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Répertoire classique, pop & variété</li>
                 </ul>
               </div>
@@ -378,7 +378,7 @@
             </div>
           </div>
 
-          <!-- Card 3: Guitare Classique & Acoustique (Dès 8 ans) -->
+          <!-- Card 3: Guitare Classique & Acoustique -->
           <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
                data-instrument="guitare" data-age="enfants ados-adultes">
             <div>
@@ -408,7 +408,7 @@
             </div>
           </div>
 
-          <!-- Card 4: Guitare Électrique (Dès 9-10 ans) -->
+          <!-- Card 4: Guitare Électrique -->
           <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
                data-instrument="guitare" data-age="enfants ados-adultes">
             <div>
@@ -438,7 +438,7 @@
             </div>
           </div>
 
-          <!-- Card NOUVEAU: Guitare Basse -->
+          <!-- Card 5: Guitare Basse -->
           <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
                data-instrument="basse guitare" data-age="enfants ados-adultes">
             <div>
@@ -468,7 +468,7 @@
             </div>
           </div>
 
-          <!-- Card 5: Batterie (Drum Kids & Ado/Adultes) -->
+          <!-- Card 6: Batterie -->
           <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
                data-instrument="batterie" data-age="enfants ados-adultes">
             <div>
@@ -487,7 +487,7 @@
                 </p>
                 <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
                   <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Drum Kids (6-7 ans, 45 min)</li>
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Batterie Ados/Adultes (>9 ans)</li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Batterie Ados/Adultes (&gt;9 ans)</li>
                 </ul>
               </div>
             </div>
@@ -498,7 +498,7 @@
             </div>
           </div>
 
-          <!-- Card 6: Chant & Class Vocals -->
+          <!-- Card 7: Chant -->
           <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
                data-instrument="chant" data-age="enfants ados-adultes">
             <div>
@@ -507,7 +507,7 @@
                      alt="Cours de Chant Colmar" 
                      class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                 <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
-                  Kids Vocals (>7 ans) & Class Vocals
+                  Kids Vocals (&gt;7 ans) & Class Vocals
                 </div>
               </div>
               <div class="p-6 space-y-3">
@@ -528,7 +528,7 @@
             </div>
           </div>
 
-          <!-- Card 7: Band Session (Jeu en groupe) -->
+          <!-- Card 8: Band Session -->
           <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between md:col-span-2"
                data-instrument="groupe piano guitare batterie chant" data-age="ados-adultes">
             <div>
@@ -546,7 +546,7 @@
                   <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-primary/20 text-primary">90 min / 2 semaines</span>
                 </div>
                 <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Apprenez à jouer au sein d'un véritable groupe de musique ! Réunissant chanteurs, guitarristes, batteurs, claviers et bassistes, cet atelier interactif permet de monter des morceaux du répertoire actuel sous la conduite d'un coach professionnel.
+                  Apprenez à jouer au sein d'un véritable groupe de musique ! Réunissant chanteurs, guitaristes, batteurs, claviers et bassistes, cet atelier interactif permet de monter des morceaux du répertoire actuel sous la conduite d'un coach professionnel.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-on-surface-variant pt-2 border-t border-outline-variant/20">
                   <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Chant, guitare, batterie, clavier, basse</div>
@@ -729,17 +729,6 @@
             <h3 class="font-bold text-lg text-on-surface">Bruno</h3>
             <p class="text-xs text-primary font-semibold mb-1">Éveil Musical & Piano</p>
             <p class="text-xs text-on-surface-variant">Doux et dynamique, spécialisé dans les cours d'éveil Junior Music Course et de piano.</p>
-          </div>
-        </div>
-
-        <div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/30 flex items-center gap-4">
-          <div class="w-16 h-16 rounded-full bg-primary/20 border border-primary/30 text-primary font-bold text-xl flex items-center justify-center shrink-0">
-            BR
-          </div>
-          <div>
-            <h3 class="font-bold text-lg text-on-surface">Bruno</h3>
-            <p class="text-xs text-primary font-semibold mb-1">Guitare & Musique Actuelle</p>
-            <p class="text-xs text-on-surface-variant">Spécialiste de la guitare acoustique et électrique. Pédagogie axée sur le plaisir de jouer.</p>
           </div>
         </div>
 
@@ -1037,7 +1026,6 @@
             class="airtable-embed w-full rounded-2xl border border-outline-variant/20 shadow-inner" 
             src="https://airtable.com/embed/app8IMzMsftYcaky6/pagbZRuK8y0awXEOB/form" 
             frameborder="0" 
-            onmousewheel="" 
             width="100%" 
             height="650" 
             style="background: transparent;">
@@ -1194,13 +1182,13 @@
   <footer class="bg-surface-container-lowest border-t border-outline-variant/30 py-12 px-4 sm:px-6 lg:px-8 mt-12">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
       
-      <!-- Brand column -->
+      <!-- Brand column with enlarged logo -->
       <div class="space-y-4 md:col-span-2">
         <div class="flex items-center gap-3">
           <img src="logo.png" 
                alt="Yamaha Music School Colmar Logo" 
-               class="h-8 sm:h-10 w-auto object-contain" 
-               onerror="this.onerror=null; this.src='https://placehold.co/200x50/111415/c9bfff?text=YAMAHA+MUSIC+SCHOOL';" />
+               class="h-12 sm:h-16 w-auto object-contain" 
+               onerror="this.onerror=null; this.src='https://placehold.co/280x80/111415/c9bfff?text=YAMAHA+MUSIC+SCHOOL';" />
         </div>
         <p class="text-xs text-on-surface-variant max-w-sm leading-relaxed">
           118, rue Kiener, 68000 COLMAR | Tél : 03 89 21 65 90 | Email : ymscolmar@gmail.com<br />
