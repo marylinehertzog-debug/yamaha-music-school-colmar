@@ -114,15 +114,15 @@
 <body class="bg-surface text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col justify-between">
 
   <!-- Navigation Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-outline-variant/30 h-24 sm:h-28 transition-all duration-300">
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-outline-variant/30 h-28 sm:h-32 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
       
-      <!-- Official Yamaha Logo Integration (Larger) -->
+      <!-- Official Yamaha Logo Integration (Enlarged) -->
       <a href="#" class="flex items-center gap-3 group py-1 shrink-0">
         <img src="logo.png" 
              alt="Yamaha Music School Colmar" 
-             class="h-14 sm:h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-             onerror="this.onerror=null; this.src='https://placehold.co/260x80/111415/c9bfff?text=YAMAHA+MUSIC+SCHOOL';" />
+             class="h-20 sm:h-24 md:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+             onerror="this.onerror=null; this.src='https://placehold.co/320x100/111415/c9bfff?text=YAMAHA+MUSIC+SCHOOL';" />
       </a>
 
       <!-- Desktop Links -->
@@ -165,12 +165,12 @@
     </div>
   </header>
 
-  <main class="pt-24 sm:pt-28">
+  <main class="pt-28 sm:pt-32">
 
     <!-- Hero Section -->
     <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 py-16">
       <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop" 
-           alt="Révélez votre potentiel musical à Colmar" 
+           alt="Apprendre la musique autrement à Colmar" 
            class="absolute inset-0 w-full h-full object-cover object-center z-0 scale-105" />
       <div class="absolute inset-0 hero-overlay z-10"></div>
 
@@ -182,9 +182,9 @@
         </div>
 
         <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-on-surface leading-[1.1]">
-          Révélez Votre <br />
+          Apprendre la Musique <br />
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-300 to-tertiary">
-            Potentiel Musical
+            Autrement
           </span>
         </h1>
 
@@ -209,7 +209,7 @@
             <div class="text-primary font-bold text-xl sm:text-2xl flex items-center gap-1">
               <span class="material-symbols-outlined">child_care</span> Dès 4 ans
             </div>
-            <p class="text-xs text-on-surface-variant mt-1">Éveil musical & cursus enfants</p>
+            <p class="text-xs text-on-surface-variant mt-1">Méthode de groupe & cursus enfants</p>
           </div>
           <div class="bg-surface-container/60 backdrop-blur-md p-4 rounded-2xl border border-outline-variant/30">
             <div class="text-primary font-bold text-xl sm:text-2xl flex items-center gap-1">
@@ -667,6 +667,29 @@
 
         </div>
 
+        <!-- Banner En Savoir Plus -->
+        <div class="mt-12 bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-6 sm:p-8 rounded-3xl border border-primary/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+          <div class="space-y-2 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider">
+              <span class="material-symbols-outlined text-lg">read_more</span>
+              <span>Besoin d'informations complémentaires ?</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-on-surface">
+              Consultez le catalogue détaillé de nos formations
+            </h3>
+            <p class="text-sm text-on-surface-variant max-w-2xl">
+              Retrouvez l'ensemble des programmes, le contenu pédagogique approfondie et tous les détails de chaque cursus sur notre page dédiée.
+            </p>
+          </div>
+          <a href="https://www.yamaha-music-school-colmar.com/site/cours/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="shrink-0 bg-primary hover:bg-primary-dim text-on-primary font-bold px-6 py-3.5 rounded-full text-sm transition-all shadow-glow hover:shadow-glow-strong flex items-center gap-2 group">
+            <span>En savoir plus sur nos cours</span>
+            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">open_in_new</span>
+          </a>
+        </div>
+
       </div>
 
     </section>
@@ -812,7 +835,7 @@
           <img src="prof-maryline.jpg" alt="Maryline" class="w-16 h-16 rounded-full object-cover border border-primary/30 shrink-0" onerror="this.onerror=null; this.src='https://placehold.co/100x100/111415/c9bfff?text=MA';" />
           <div>
             <h3 class="font-bold text-lg text-on-surface">Maryline</h3>
-            <p class="text-xs text-primary font-semibold mb-1">Guitare Classique, Électrique & Basse</p>
+            <p class="text-xs text-primary font-semibold mb-1">Guitare Classique, Électrique, Basse & Band Session</p>
             <p class="text-xs text-on-surface-variant">Enseignante passionnée pour tous niveaux.</p>
           </div>
         </div>
@@ -821,8 +844,8 @@
           <img src="prof-bruno.jpg" alt="Bruno" class="w-16 h-16 rounded-full object-cover border border-primary/30 shrink-0" onerror="this.onerror=null; this.src='https://placehold.co/100x100/111415/c9bfff?text=BR';" />
           <div>
             <h3 class="font-bold text-lg text-on-surface">Bruno</h3>
-            <p class="text-xs text-primary font-semibold mb-1">Éveil Musical & Piano</p>
-            <p class="text-xs text-on-surface-variant">Spécialisé dans l'éveil Junior Music Course et le piano.</p>
+            <p class="text-xs text-primary font-semibold mb-1">Piano & Claviers (JMC)</p>
+            <p class="text-xs text-on-surface-variant">Spécialisé dans le cours Junior Music Course et le piano.</p>
           </div>
         </div>
 
@@ -830,8 +853,8 @@
           <img src="prof-stepan.jpg" alt="Stepan" class="w-16 h-16 rounded-full object-cover border border-primary/30 shrink-0" onerror="this.onerror=null; this.src='https://placehold.co/100x100/111415/c9bfff?text=ST';" />
           <div>
             <h3 class="font-bold text-lg text-on-surface">Stepan</h3>
-            <p class="text-xs text-primary font-semibold mb-1">Claviers & Piano</p>
-            <p class="text-xs text-on-surface-variant">Expert du déchiffrage et de la technique pianistique.</p>
+            <p class="text-xs text-primary font-semibold mb-1">Professeur de Piano</p>
+            <p class="text-xs text-on-surface-variant">Professeur de piano pour enfants, adolescents et adultes.</p>
           </div>
         </div>
 
@@ -840,7 +863,7 @@
           <div>
             <h3 class="font-bold text-lg text-on-surface">Maelle</h3>
             <p class="text-xs text-primary font-semibold mb-1">Chant & Technique Vocale</p>
-            <p class="text-xs text-on-surface-variant">Pose de voix, respiration et confiance en soi sur scène.</p>
+            <p class="text-xs text-on-surface-variant">Pose de voix, respiration et confiance en soi.</p>
           </div>
         </div>
 
@@ -871,7 +894,7 @@
               <span class="text-primary">Apprendre la musique comme une langue maternelle</span>
             </h2>
             <p class="text-on-surface-variant text-base sm:text-lg leading-relaxed">
-              Depuis plus de 60 ans, le système d'enseignement musical Yamaha permet à des millions d'élèves à travers le monde de s'épanouir dans la pratique instrumentale.
+              Depuis plus de 60 ans, le système d'enseignement musical Yamaha permet à des milliers d'élèves à travers le monde de s'épanouir dans la pratique instrumentale.
             </p>
 
             <div class="space-y-4 pt-2">
@@ -952,7 +975,7 @@
               BG
             </div>
             <div>
-              <div class="font-bold text-sm text-on-surface">Bertrand Geismar</div>
+              <div class="font-bold text-sm text-on-surface">Bertrand G.</div>
               <div class="text-xs text-on-surface-variant">Papa, cours pour sa fille</div>
             </div>
           </div>
@@ -971,8 +994,8 @@
               OP
             </div>
             <div>
-              <div class="font-bold text-sm text-on-surface">Olivier Philippe</div>
-              <div class="text-xs text-on-surface-variant">Élève adulte</div>
+              <div class="font-bold text-sm text-on-surface">Olivier P.</div>
+              <div class="text-xs text-on-surface-variant">Parent d'élève</div>
             </div>
           </div>
         </div>
@@ -990,8 +1013,8 @@
               NV
             </div>
             <div>
-              <div class="font-bold text-sm text-on-surface">Nathalie Villard</div>
-              <div class="text-xs text-on-surface-variant">Parent d'élève</div>
+              <div class="font-bold text-sm text-on-surface">Nathalie V.</div>
+              <div class="text-xs text-on-surface-variant">Élève adulte</div>
             </div>
           </div>
         </div>
