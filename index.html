@@ -95,7 +95,6 @@
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
 
-    /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -113,11 +112,10 @@
 </head>
 <body class="bg-surface text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col justify-between">
 
-  <!-- Navigation Header -->
   <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-outline-variant/30 h-28 sm:h-32 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
       
-      <!-- Official Yamaha Logo Integration (Enlarged) -->
+      <!-- Official Yamaha Logo -->
       <a href="#" class="flex items-center gap-3 group py-1 shrink-0">
         <img src="logo.png" 
              alt="Yamaha Music School Colmar" 
@@ -143,14 +141,13 @@
           <span>Cours d'essai gratuit</span>
         </a>
 
-        <!-- Mobile Menu Toggle -->
         <button id="mobile-menu-btn" aria-label="Ouvrir le menu" class="lg:hidden p-2 text-on-surface hover:text-primary focus:outline-none">
           <span class="material-symbols-outlined text-2xl" id="menu-icon">menu</span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 right-0 bg-surface-container border-b border-outline-variant/40 px-6 py-6 space-y-4 shadow-xl">
       <a href="#portes-ouvertes" class="block text-primary font-bold py-1" onclick="toggleMenu()">📅 Portes Ouvertes (5 Sept)</a>
       <a href="#cours" class="block text-on-surface hover:text-primary font-medium py-1" onclick="toggleMenu()">Nos Cours & Disciplines</a>
@@ -167,12 +164,10 @@
 
   <main class="pt-28 sm:pt-32">
 
-<!-- Hero Section -->
     <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 py-16">
-      <img src="hero-gb.jpg" 
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop" 
            alt="Apprendre la musique autrement à Colmar" 
-           class="absolute inset-0 w-full h-full object-cover object-center z-0 scale-105"
-           onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop';" />
+           class="absolute inset-0 w-full h-full object-cover object-center z-0 scale-105" />
       <div class="absolute inset-0 hero-overlay z-10"></div>
 
       <div class="relative z-20 max-w-5xl mx-auto text-center space-y-8 mt-6">
@@ -204,7 +199,7 @@
           </a>
         </div>
 
-        <!-- 4 Badges Under Hero -->
+        <!-- Hero Badges -->
         <div class="pt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
           <div class="bg-surface-container/60 backdrop-blur-md p-4 rounded-2xl border border-outline-variant/30">
             <div class="text-primary font-bold text-xl sm:text-2xl flex items-center gap-1">
@@ -235,7 +230,6 @@
       </div>
     </section>
 
-    <!-- SECTION PORTES OUVERTES (5 Septembre 2026) -->
     <section id="portes-ouvertes" class="py-20 bg-surface-container-lowest border-y border-outline-variant/30 scroll-mt-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
@@ -258,7 +252,6 @@
         <!-- Planning & Details Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           
-          <!-- Planning Box -->
           <div class="lg:col-span-2 bg-surface-container p-8 rounded-3xl border border-outline-variant/40 space-y-6 shadow-xl">
             <div class="flex items-center justify-between border-b border-outline-variant/30 pb-4">
               <h3 class="text-xl font-bold text-on-surface flex items-center gap-2">
@@ -308,7 +301,6 @@
             </p>
           </div>
 
-          <!-- Quick Registration Card for PO -->
           <div class="bg-surface-container p-8 rounded-3xl border border-primary/50 shadow-glow flex flex-col justify-between space-y-6">
             <div class="space-y-4">
               <span class="text-xs uppercase font-bold text-primary tracking-wider">Réservation Événement</span>
@@ -334,7 +326,6 @@
       </div>
     </section>
 
-    <!-- Disciplines / Courses Section with Interactive Sidebar Filters -->
     <section id="cours" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
       
       <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
@@ -351,7 +342,7 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
         
-        <!-- Interactive Sidebar Filter -->
+        <!-- Sidebar Filter (Left Column) -->
         <div class="bg-surface-container p-6 rounded-2xl border border-outline-variant/40 lg:sticky lg:top-32 space-y-6 shadow-lg">
           <div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
             <h3 class="font-bold text-on-surface flex items-center gap-2">
@@ -361,7 +352,6 @@
             <button id="reset-filters" class="text-xs text-primary hover:underline font-semibold">Réinitialiser</button>
           </div>
 
-          <!-- Instrument Filter -->
           <div class="space-y-3">
             <h4 class="text-xs font-bold uppercase tracking-wider text-outline">Instruments</h4>
             <div class="space-y-2 text-sm text-on-surface-variant">
@@ -392,7 +382,6 @@
             </div>
           </div>
 
-          <!-- Age Group Filter -->
           <div class="space-y-3 pt-3 border-t border-outline-variant/30">
             <h4 class="text-xs font-bold uppercase tracking-wider text-outline">Tranche d'âge</h4>
             <div class="space-y-2 text-sm text-on-surface-variant">
@@ -412,290 +401,294 @@
           </div>
         </div>
 
-        <!-- Course Cards Grid -->
-        <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6" id="course-cards-container">
+        <!-- Right Main Section (3 columns on lg) -->
+        <div class="lg:col-span-3 space-y-8">
 
-          <!-- Card 1: JMC -->
-          <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
-               data-instrument="piano" data-age="eveil">
-            <div>
-              <div class="relative h-52 overflow-hidden">
-                <img src="jmc-eveil.jpg" 
-                     alt="Junior Music Course Colmar" 
-                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop';" />
-                <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
-                  4 - 5 ans
+          <!-- Course Cards Container Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="course-cards-container">
+
+            <!-- JMC -->
+            <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
+                 data-instrument="piano" data-age="eveil">
+              <div>
+                <div class="relative h-52 overflow-hidden">
+                  <img src="jmc-eveil.jpg" 
+                       alt="Junior Music Course Colmar" 
+                       class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+                       onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop';" />
+                  <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
+                    4 - 5 ans
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <h3 class="text-xl font-bold text-on-surface">Junior Music Course (JMC)</h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Développez les capacités musicales fondamentales de votre enfant au moment idéal de sa croissance auditive. Apprentissage par le chant, le clavier et les jeux rythmiques en groupe.
+                  </p>
+                  <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Développement de l'oreille & créativité</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Cours collectif ludique au clavier</li>
+                  </ul>
                 </div>
               </div>
-              <div class="p-6 space-y-3">
-                <h3 class="text-xl font-bold text-on-surface">Junior Music Course (JMC)</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Développez les capacités musicales fondamentales de votre enfant au moment idéal de sa croissance auditive. Apprentissage par le chant, le clavier et les jeux rythmiques en groupe.
-                </p>
-                <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Développement de l'oreille & créativité</li>
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Cours collectif ludique au clavier</li>
-                </ul>
+              <div class="p-6 pt-0">
+                <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
+                  Réserver en Piano
+                </a>
               </div>
             </div>
-            <div class="p-6 pt-0">
-              <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
-                Réserver en Piano
-              </a>
+
+            <!-- Piano Yamaha -->
+            <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
+                 data-instrument="piano" data-age="enfants ados-adultes">
+              <div>
+                <div class="relative h-52 overflow-hidden">
+                  <img src="piano-yamaha.jpg" 
+                       alt="Cours de Piano Colmar" 
+                       class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                       onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=800&auto=format&fit=crop';" />
+                  <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
+                    Dès 6 ans, Ados & Adultes
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <h3 class="text-xl font-bold text-on-surface">Piano & Clavier Yamaha</h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Apprenez le piano grâce à une méthode progressive alliant solfège ludique, déchiffrage, harmonie et interprétation. Des cours stimulants pour enfants, adolescents et adultes.
+                  </p>
+                  <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Music Adventure (6-8 ans) & Play for Keeps (>10 ans)</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Répertoire classique, pop & variété</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
+                  Réserver en Piano
+                </a>
+              </div>
             </div>
+
+            <!-- Guitare Classique -->
+            <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
+                 data-instrument="guitare" data-age="enfants ados-adultes">
+              <div>
+                <div class="relative h-52 overflow-hidden">
+                  <img src="guitare-acoustique.jpg" 
+                       alt="Guitare Acoustique et Classique Colmar" 
+                       class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                       onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=800&auto=format&fit=crop';" />
+                  <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
+                    Junior Guitar dès 8 ans
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <h3 class="text-xl font-bold text-on-surface">Guitare Classique & Acoustique</h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Conçu spécialement pour les enfants à partir de 8 ans et les débutants. Apprentissage de la posture, accompagnement en accords, mélodie et lecture de notes dans une ambiance stimulante.
+                  </p>
+                  <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Junior Guitar Course (8-12 ans) & Cursus Adultes</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Jeu aux doigts et au médiator</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
+                  Réserver en Guitare Classique
+                </a>
+              </div>
+            </div>
+
+            <!-- Guitare Électrique -->
+            <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
+                 data-instrument="guitare" data-age="enfants ados-adultes">
+              <div>
+                <div class="relative h-52 overflow-hidden">
+                  <img src="guitare-electrique.jpg" 
+                       alt="Guitare Électrique Colmar" 
+                       class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                       onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?q=80&w=800&auto=format&fit=crop';" />
+                  <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
+                    Dès 9 - 10 ans & Adultes
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <h3 class="text-xl font-bold text-on-surface">Guitare Électrique</h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Faites parler l'énergie du Rock, de la Pop et du Funk ! Travaillez les riffs mythiques, les effets, la distorsion, l'improvisation et la technique de solo avec nos amplis et matériels dédiés.
+                  </p>
+                  <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Étude des styles Rock, Pop, Hard, Blues</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Tablatures & solos rythmiques</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
+                  Réserver en Guitare Électrique
+                </a>
+              </div>
+            </div>
+
+            <!-- Basse -->
+            <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
+                 data-instrument="basse guitare" data-age="enfants ados-adultes">
+              <div>
+                <div class="relative h-52 overflow-hidden">
+                  <img src="guitare-basse.jpg" 
+                       alt="Cours de Guitare Basse Colmar" 
+                       class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                       onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1550985616-10810253b84d?q=80&w=800&auto=format&fit=crop';" />
+                  <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
+                    Dès 9 - 10 ans, Ados & Adultes
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <h3 class="text-xl font-bold text-on-surface">Guitare Basse</h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Le pilier du groove et du rythme ! Développez la technique de jeu aux doigts ou au plectre, la mise en place rythmique et les lignes de basse sur des répertoires Pop, Rock, Funk et Jazz.
+                  </p>
+                  <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Technique de jeu, groove & tempo</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Accompagnement de groupe & tablatures</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
+                  Réserver en Guitare Basse
+                </a>
+              </div>
+            </div>
+
+            <!-- Batterie -->
+            <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
+                 data-instrument="batterie" data-age="enfants ados-adultes">
+              <div>
+                <div class="relative h-52 overflow-hidden">
+                  <img src="batterie.jpg" 
+                       alt="Cours de Batterie Colmar" 
+                       class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                       onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=800&auto=format&fit=crop';" />
+                  <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
+                    Drum Kids dès 6 ans & Adultes
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <h3 class="text-xl font-bold text-on-surface">Batterie & Percussions</h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Travaillez l'indépendance des membres, le groove et le tempo. Formule Drum Kids adaptée dès 6-7 ans et cursus adulte sur batteries électroniques et acoustiques Yamaha.
+                  </p>
+                  <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Drum Kids (6-7 ans, 45 min)</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Batterie Ados/Adultes (>9 ans)</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
+                  Réserver en Batterie
+                </a>
+              </div>
+            </div>
+
+            <!-- Chant -->
+            <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
+                 data-instrument="chant" data-age="enfants ados-adultes">
+              <div>
+                <div class="relative h-52 overflow-hidden">
+                  <img src="chant.jpg" 
+                       alt="Cours de Chant Colmar" 
+                       class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                       onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=800&auto=format&fit=crop';" />
+                  <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
+                    Kids Vocals (>7 ans) & Class Vocals
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <h3 class="text-xl font-bold text-on-surface">Chant & Technique Vocale</h3>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Libérez votre voix ! Technique de respiration, posture, justesse, harmonie vocale et interprétation scénique sur les répertoires Pop, Rock et Chanson.
+                  </p>
+                  <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Kids Vocals (enfants dès 7-9 ans)</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Class Vocals & coaching ados / adultes</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
+                  Réserver en Chant
+                </a>
+              </div>
+            </div>
+
+            <!-- Band Session -->
+            <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between md:col-span-2"
+                 data-instrument="groupe piano guitare batterie chant" data-age="ados-adultes">
+              <div>
+                <div class="relative h-56 overflow-hidden">
+                  <img src="band-session.jpg" 
+                       alt="Band Session Colmar" 
+                       class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                       onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1000&auto=format&fit=crop';" />
+                  <div class="absolute top-3 left-3 bg-tertiary text-on-tertiary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
+                    Jeu en groupe — Ados & Adultes
+                  </div>
+                </div>
+                <div class="p-6 space-y-3">
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-2xl font-bold text-on-surface">Band Session (Jeu en Groupe)</h3>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-primary/20 text-primary">90 min / 2 semaines</span>
+                  </div>
+                  <p class="text-sm text-on-surface-variant leading-relaxed">
+                    Apprenez à jouer au sein d'un véritable groupe de musique ! Réunissant chanteurs, guitarristes, batteurs, claviers et bassistes, cet atelier interactif permet de monter des morceaux du répertoire actuel sous la conduite d'un coach professionnel.
+                  </p>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-on-surface-variant pt-2 border-t border-outline-variant/20">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Chant, guitare, batterie, clavier, basse</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Tarif préférentiel pour élèves de l'école</div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 pt-0">
+                <a href="#reservation" class="block w-full text-center bg-primary text-on-primary font-bold py-3 rounded-xl text-sm transition-all hover:bg-primary-dim">
+                  Réserver ma place en Band Session
+                </a>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Card 2: Piano & Clavier Yamaha -->
-          <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
-               data-instrument="piano" data-age="enfants ados-adultes">
-            <div>
-              <div class="relative h-52 overflow-hidden">
-                <img src="piano-yamaha.jpg" 
-                     alt="Cours de Piano Colmar" 
-                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=800&auto=format&fit=crop';" />
-                <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
-                  Dès 6 ans, Ados & Adultes
-                </div>
+          <!-- Banner En Savoir Plus (Placée tout à droite sous les cartes de cours) -->
+          <div class="bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-6 sm:p-8 rounded-3xl border border-primary/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+            <div class="space-y-2 text-center md:text-left">
+              <div class="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider">
+                <span class="material-symbols-outlined text-lg">read_more</span>
+                <span>Besoin d'informations complémentaires ?</span>
               </div>
-              <div class="p-6 space-y-3">
-                <h3 class="text-xl font-bold text-on-surface">Piano & Clavier Yamaha</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Apprenez le piano grâce à une méthode progressive alliant solfège ludique, déchiffrage, harmonie et interprétation. Des cours stimulants pour enfants, adolescents et adultes.
-                </p>
-                <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Music Adventure (6-8 ans) & Play for Keeps (>10 ans)</li>
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Répertoire classique, pop & variété</li>
-                </ul>
-              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-on-surface">
+                Consultez le catalogue détaillé de nos cours
+              </h3>
+              <p class="text-sm text-on-surface-variant max-w-2xl">
+                Retrouvez l'ensemble des programmes, le contenu pédagogique approfondi et tous les détails de chaque cursus sur notre page dédiée.
+              </p>
             </div>
-            <div class="p-6 pt-0">
-              <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
-                Réserver en Piano
-              </a>
-            </div>
+            <a href="https://www.yamaha-music-school-colmar.com/site/cours/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="shrink-0 bg-primary hover:bg-primary-dim text-on-primary font-bold px-6 py-3.5 rounded-full text-sm transition-all shadow-glow hover:shadow-glow-strong flex items-center gap-2 group">
+              <span>En savoir plus sur nos cours</span>
+              <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">open_in_new</span>
+            </a>
           </div>
 
-          <!-- Card 3: Guitare Classique & Acoustique -->
-          <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
-               data-instrument="guitare" data-age="enfants ados-adultes">
-            <div>
-              <div class="relative h-52 overflow-hidden">
-                <img src="guitare-acoustique.jpg" 
-                     alt="Guitare Acoustique et Classique Colmar" 
-                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=800&auto=format&fit=crop';" />
-                <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
-                  Junior Guitar dès 8 ans
-                </div>
-              </div>
-              <div class="p-6 space-y-3">
-                <h3 class="text-xl font-bold text-on-surface">Guitare Classique & Acoustique</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Conçu spécialement pour les enfants à partir de 8 ans et les débutants. Apprentissage de la posture, accompagnement en accords, mélodie et lecture de notes dans une ambiance stimulante.
-                </p>
-                <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Junior Guitar Course (8-12 ans) & Cursus Adultes</li>
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Jeu aux doigts et au médiator</li>
-                </ul>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
-                Réserver en Guitare Classique
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 4: Guitare Électrique -->
-          <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
-               data-instrument="guitare" data-age="enfants ados-adultes">
-            <div>
-              <div class="relative h-52 overflow-hidden">
-                <img src="guitare-electrique.jpg" 
-                     alt="Guitare Électrique Colmar" 
-                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?q=80&w=800&auto=format&fit=crop';" />
-                <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
-                  Dès 9 - 10 ans & Adultes
-                </div>
-              </div>
-              <div class="p-6 space-y-3">
-                <h3 class="text-xl font-bold text-on-surface">Guitare Électrique</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Faites parler l'énergie du Rock, de la Pop et du Funk ! Travaillez les riffs mythiques, les effets, la distorsion, l'improvisation et la technique de solo avec nos amplis et matériels dédiés.
-                </p>
-                <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Étude des styles Rock, Pop, Hard, Blues</li>
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Tablatures & solos rythmiques</li>
-                </ul>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
-                Réserver en Guitare Électrique
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 5: Guitare Basse -->
-          <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
-               data-instrument="basse guitare" data-age="enfants ados-adultes">
-            <div>
-              <div class="relative h-52 overflow-hidden">
-                <img src="guitare-basse.jpg" 
-                     alt="Cours de Guitare Basse Colmar" 
-                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1550985616-10810253b84d?q=80&w=800&auto=format&fit=crop';" />
-                <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
-                  Dès 9 - 10 ans, Ados & Adultes
-                </div>
-              </div>
-              <div class="p-6 space-y-3">
-                <h3 class="text-xl font-bold text-on-surface">Guitare Basse</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Le pilier du groove et du rythme ! Développez la technique de jeu aux doigts ou au plectre, la mise en place rythmique et les lignes de basse sur des répertoires Pop, Rock, Funk et Jazz.
-                </p>
-                <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Technique de jeu, groove & tempo</li>
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Accompagnement de groupe & tablatures</li>
-                </ul>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
-                Réserver en Guitare Basse
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 6: Batterie -->
-          <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
-               data-instrument="batterie" data-age="enfants ados-adultes">
-            <div>
-              <div class="relative h-52 overflow-hidden">
-                <img src="batterie.jpg" 
-                     alt="Cours de Batterie Colmar" 
-                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=800&auto=format&fit=crop';" />
-                <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
-                  Drum Kids dès 6 ans & Adultes
-                </div>
-              </div>
-              <div class="p-6 space-y-3">
-                <h3 class="text-xl font-bold text-on-surface">Batterie & Percussions</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Travaillez l'indépendance des membres, le groove et le tempo. Formule Drum Kids adaptée dès 6-7 ans et cursus adulte sur batteries électroniques et acoustiques Yamaha.
-                </p>
-                <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Drum Kids (6-7 ans, 45 min)</li>
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Batterie Ados/Adultes (>9 ans)</li>
-                </ul>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
-                Réserver en Batterie
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 7: Chant -->
-          <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between"
-               data-instrument="chant" data-age="enfants ados-adultes">
-            <div>
-              <div class="relative h-52 overflow-hidden">
-                <img src="chant.jpg" 
-                     alt="Cours de Chant Colmar" 
-                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=800&auto=format&fit=crop';" />
-                <div class="absolute top-3 left-3 bg-primary text-on-primary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
-                  Kids Vocals (>7 ans) & Class Vocals
-                </div>
-              </div>
-              <div class="p-6 space-y-3">
-                <h3 class="text-xl font-bold text-on-surface">Chant & Technique Vocale</h3>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Libérez votre voix ! Technique de respiration, posture, justesse, harmonie vocale et interprétation scénique sur les répertoires Pop, Rock et Chanson.
-                </p>
-                <ul class="text-xs text-on-surface-variant space-y-1.5 pt-2 border-t border-outline-variant/20">
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Kids Vocals (enfants dès 7-9 ans)</li>
-                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Class Vocals & coaching ados / adultes</li>
-                </ul>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="#reservation" class="block w-full text-center bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-semibold py-2.5 rounded-xl text-sm transition-all border border-outline-variant/30">
-                Réserver en Chant
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 8: Band Session -->
-          <div class="course-card bg-surface-container rounded-2xl overflow-hidden border border-outline-variant/30 card-hover flex flex-col justify-between md:col-span-2"
-               data-instrument="groupe piano guitare batterie chant" data-age="ados-adultes">
-            <div>
-              <div class="relative h-56 overflow-hidden">
-                <img src="band-session.jpg" 
-                     alt="Band Session Colmar" 
-                     class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1000&auto=format&fit=crop';" />
-                <div class="absolute top-3 left-3 bg-tertiary text-on-tertiary font-bold text-xs px-3 py-1.5 rounded-full shadow-md">
-                  Jeu en groupe — Ados & Adultes
-                </div>
-              </div>
-              <div class="p-6 space-y-3">
-                <div class="flex items-center justify-between">
-                  <h3 class="text-2xl font-bold text-on-surface">Band Session (Jeu en Groupe)</h3>
-                  <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-primary/20 text-primary">90 min / 2 semaines</span>
-                </div>
-                <p class="text-sm text-on-surface-variant leading-relaxed">
-                  Apprenez à jouer au sein d'un véritable groupe de musique ! Réunissant chanteurs, guitarristes, batteurs, claviers et bassistes, cet atelier interactif permet de monter des morceaux du répertoire actuel sous la conduite d'un coach professionnel.
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-on-surface-variant pt-2 border-t border-outline-variant/20">
-                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Chant, guitare, batterie, clavier, basse</div>
-                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Tarif préférentiel pour élèves de l'école</div>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="#reservation" class="block w-full text-center bg-primary text-on-primary font-bold py-3 rounded-xl text-sm transition-all hover:bg-primary-dim">
-                Réserver ma place en Band Session
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Banner En Savoir Plus -->
-        <div class="md:ml-auto w-full md:w-3/4 mt-12 bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-6 sm:p-8 rounded-3xl border border-primary/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div class="space-y-2 text-center md:text-left">
-            <div class="inline-flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-wider">
-              <span class="material-symbols-outlined text-lg">read_more</span>
-              <span>Besoin d'informations complémentaires ?</span>
-            </div>
-            <h3 class="text-xl sm:text-2xl font-extrabold text-on-surface">
-              Consultez le catalogue détaillé de nos formations
-            </h3>
-            <p class="text-sm text-on-surface-variant max-w-2xl">
-              Retrouvez l'ensemble des programmes, le contenu pédagogique approfondie et tous les détails de chaque cursus sur notre page dédiée.
-            </p>
-          </div>
-          <a href="https://www.yamaha-music-school-colmar.com/site/cours/" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="shrink-0 bg-primary hover:bg-primary-dim text-on-primary font-bold px-6 py-3.5 rounded-full text-sm transition-all shadow-glow hover:shadow-glow-strong flex items-center gap-2 group">
-            <span>En savoir plus sur nos cours</span>
-            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">open_in_new</span>
-          </a>
         </div>
 
       </div>
 
     </section>
 
-    <!-- Formats & Tarifs Section -->
     <section id="tarifs" class="py-20 bg-surface-container-lowest border-y border-outline-variant/30 scroll-mt-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
@@ -713,7 +706,6 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <!-- Collective Lessons Card -->
           <div class="bg-surface-container p-8 rounded-3xl border border-outline-variant/40 flex flex-col justify-between space-y-6">
             <div class="space-y-4">
               <div class="flex justify-between items-start">
@@ -749,7 +741,6 @@
             </a>
           </div>
 
-          <!-- Individual Lessons Card -->
           <div class="bg-surface-container p-8 rounded-3xl border border-primary/40 shadow-glow flex flex-col justify-between space-y-6">
             <div class="space-y-4">
               <div class="flex justify-between items-start">
@@ -807,7 +798,6 @@
       </div>
     </section>
 
-    <!-- Section Nos Professeurs -->
     <section id="professeurs" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <div class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20 uppercase tracking-widest">
@@ -880,7 +870,6 @@
       </div>
     </section>
 
-    <!-- Yamaha Method Presentation Section -->
     <section id="methode" class="py-20 bg-surface-container/60 border-y border-outline-variant/30 relative overflow-hidden scroll-mt-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -931,7 +920,6 @@
             </div>
           </div>
 
-          <!-- Feature Image -->
           <div class="relative">
             <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/30">
               <img src="piano-yamaha-methode.jpg" 
@@ -947,7 +935,6 @@
       </div>
     </section>
 
-    <!-- Avis & Témoignages Clients Réels -->
     <section id="avis" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <div class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20 uppercase tracking-widest">
@@ -963,7 +950,6 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- Avis 1 -->
         <div class="bg-surface-container p-8 rounded-3xl border border-outline-variant/30 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
             <span class="material-symbols-outlined text-4xl text-primary/40">format_quote</span>
@@ -982,7 +968,6 @@
           </div>
         </div>
 
-        <!-- Avis 2 -->
         <div class="bg-surface-container p-8 rounded-3xl border border-outline-variant/30 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
             <span class="material-symbols-outlined text-4xl text-primary/40">format_quote</span>
@@ -1001,7 +986,6 @@
           </div>
         </div>
 
-        <!-- Avis 3 -->
         <div class="bg-surface-container p-8 rounded-3xl border border-outline-variant/30 flex flex-col justify-between space-y-6">
           <div class="space-y-4">
             <span class="material-symbols-outlined text-4xl text-primary/40">format_quote</span>
@@ -1023,7 +1007,6 @@
       </div>
     </section>
 
-    <!-- Why Us Section -->
     <section id="pourquoi-nous" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-outline-variant/30">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <h2 class="text-3xl sm:text-5xl font-extrabold text-on-surface">
@@ -1068,7 +1051,7 @@
 
       </div>
 
-      <!-- How it Works Steps -->
+      <!-- Steps -->
       <div class="mt-20 p-8 sm:p-12 rounded-3xl bg-surface-container-low border border-outline-variant/30">
         <h3 class="text-2xl font-bold text-center text-on-surface mb-10 uppercase tracking-wider text-sm text-primary">
           Comment se déroule votre cours d'essai gratuit ?
@@ -1111,7 +1094,6 @@
 
     </section>
 
-    <!-- Reservation Form Section (AIRTABLE INTEGRATION) -->
     <section id="reservation" class="py-20 bg-surface-container-lowest border-t border-outline-variant/30 scroll-mt-24">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
@@ -1128,12 +1110,11 @@
           </p>
         </div>
 
-        <!-- AIRTABLE IFRAME CONTAINER -->
         <div class="bg-surface-container rounded-3xl p-2 sm:p-6 border border-outline-variant/40 shadow-2xl relative overflow-hidden">
           
           <div class="absolute -top-24 -right-24 w-72 h-72 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
 
-          <!-- Embedded Airtable Form -->
+          <!-- Airtable Form -->
           <iframe 
             class="airtable-embed w-full rounded-2xl border border-outline-variant/20 shadow-inner" 
             src="https://airtable.com/embed/app8IMzMsftYcaky6/pagbZRuK8y0awXEOB/form" 
@@ -1164,7 +1145,6 @@
       </div>
     </section>
 
-    <!-- Info Pratiques & FAQ Section -->
     <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
       
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -1265,7 +1245,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="bg-surface-container-lowest border-t border-outline-variant/30 py-12 px-4 sm:px-6 lg:px-8 mt-12">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
       
